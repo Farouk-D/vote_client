@@ -111,14 +111,14 @@ const BO = () => {
         setValue("0")
       }}
                 className="mx-2 my-2 sm:my-0">
-          <img src="/Hedi.jpg" alt="Première Image" className={`transition-all duration-300 ease-in-out ${voteSelected === "Jude" ? "border-8 border-yellow-600 w-96 h-96 transform scale-100" : "w-80 h-80"} shadow-lg hover:shadow-xl`} />
+          <img src="/Hedi2.JPG" alt="Première Image" className={`transition-all duration-300 ease-in-out ${voteSelected === "Jude" ? "border-8 border-yellow-600 w-80 h-96 transform scale-100" : "w-80 h-80"} shadow-lg hover:shadow-xl`} />
         </button>
         <button onClick={() => {
         setVoteSelected("Diable")
         setValue("1")
       }}
                 className="mx-2">
-          <img src="Farouk.jpg" alt="Deuxième Image" className={`transition-all duration-300 ease-in-out ${voteSelected === "Diable" ? "border-8 border-yellow-600 w-96 h-96 transform scale-100" : "w-80 h-80"} shadow-lg hover:shadow-xl`}  />
+          <img src="Farouk.jpg" alt="Deuxième Image" className={`transition-all duration-300 ease-in-out ${voteSelected === "Diable" ? "border-8 border-yellow-600 w-80 h-96 transform scale-100" : "w-80 h-80"} shadow-lg hover:shadow-xl`}  />
         </button>
       </div>
       <div className="container mx-auto px-4">

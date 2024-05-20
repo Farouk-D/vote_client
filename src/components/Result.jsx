@@ -26,7 +26,7 @@ const Result = () => {
         <div className="max-w-screen-xl w-full px-4">
           <div className="flex flex-col space-y-6 mt-8">
             <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
-              <img src="/Hedi2.jpg" alt="Première Image" className="transition-all duration-300 ease-in-out w-80 h-80 shadow-lg hover:shadow-xl" />
+              <img src="/Hedi.JPG" alt="Première Image" className="transition-all duration-300 ease-in-out w-72 h-96 shadow-lg hover:shadow-xl" />
               <div className="bg-transparent rounded-lg w-full md:w-2/3 p-4">
                 <div className="w-full h-8 bg-gray-400 rounded-full">
                   <div className="h-full text-center text-xl text-white bg-yellow-700 rounded-full" style={{ width: `${judePercent}%` }}>
@@ -36,7 +36,7 @@ const Result = () => {
               </div>
             </div>
             <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
-              <img src="Farouk2.jpg" alt="Deuxième Image" className="transition-all duration-300 ease-in-out w-80 h-80 shadow-lg hover:shadow-xl" />
+              <img src="Farouk2.JPG" alt="Deuxième Image" className="transition-all duration-300 ease-in-out w-72 h-96 shadow-lg hover:shadow-xl" />
               <div className="bg-transparent rounded-lg w-full md:w-2/3 p-4">
                 <div className="w-full h-8 bg-gray-400 rounded-full">
                   <div className="h-full text-center text-xl text-white bg-yellow-700 rounded-full" style={{ width: `${viniPercent}%` }}>
