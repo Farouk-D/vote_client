@@ -12,6 +12,7 @@ const Result = () => {
       withCredentials: true,
     }).then(res => {
       if (res.data.valid) {
+        // a
         setViniPercent(res.data.result === 0 ? 0 : res.data.result);
         setJudePercent(res.data.result === 0 ? 0 : 100 - res.data.result);
       }
