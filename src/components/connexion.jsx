@@ -19,28 +19,28 @@ const Connexion = () => {
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePasswordVisibility = () => setPasswordShown(!passwordShown);
 
-  //axios.defaults.withCredentials = true;
+ axios.defaults.withCredentials = true;
 
-  // const backgrounds = [
-  //   'https://www.hdwallpapers.in/download/black_and_gold_tunnels_glare_lights_4k_hd_black_and_gold-3840x2160.jpg',
-  //   'https://pbs.twimg.com/media/F9td8OzWEAAEJn0.jpg:large',
-  //   '/HediVSFarouk2.png',
-  //   'https://wallpaper.forfun.com/fetch/7d/7ddc54e8ffbb9afc4674c2707f7c15a4.jpeg',
-  //   'https://www.fanzword.com/wp-content/uploads/2024/05/GettyImages-1610621328-fotor-20231008145311-scaled.webp',
-  //   '/ViniciusBellingham.png',
-  //   '/HediVSFarouk.png',
-  //   'https://i.pinimg.com/originals/e4/6c/af/e46cafd7bf8a1bba700920f57c8f7acd.jpg'
-  // ];
+  const backgrounds = [
+    '/BandJ.jpg',
+    '/ViniBelli.jpg:large',
+    '/HediVSFarouk2.png',
+    '/Stade.jpeg',
+    '/ViniciusBellingham.png',
+    'TOTW.png',
+    '/HediVSFarouk.png',
+    '/Alg.jpg'
+  ];
 
   const [bgIndex, setBgIndex] = useState(0);
 
-  // useEffect(() => {
-  //   const intervalId = setInterval(() => {
-  //     setBgIndex((current) => (current + 1) % backgrounds.length);
-  //   }, 7000); // Change l'image toutes les 10 secondes
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setBgIndex((current) => (current + 1) % backgrounds.length);
+    }, 7000); // Change l'image toutes les 10 secondes
 
-  //   return () => clearInterval(intervalId); // Nettoyage de l'intervalle²²
-  // }, []);
+    return () => clearInterval(intervalId); // Nettoyage de l'intervalle²²
+  }, []);
 
   const onSubmit = async (data) => {
     try {
@@ -92,7 +92,7 @@ const Connexion = () => {
   }
 
   return (
-    <div  className="flex flex-col items-center min-h-screen justify-center">
+    <div style={{ backgroundImage: `url(${backgrounds[bgIndex]})`, backgroundSize: 'cover', backgroundPosition: 'center' }} className="flex flex-col items-center min-h-screen justify-center">
       <a href="/">
         <img src="/VoteLogo.jpg" alt="Logo" className="relative z-20 -mt-80 h-auto w-36 rounded-full border-t-2 border-l-2 border-r-2 border-yellow-700" />  
       </a>
