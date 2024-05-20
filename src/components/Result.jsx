@@ -12,6 +12,7 @@ const Result = () => {
       withCredentials: true,
     }).then(res => {
       if (res.data.valid) {
+        // a
         setViniPercent(res.data.result === 0 ? 0 : res.data.result);
         setJudePercent(res.data.result === 0 ? 0 : 100 - res.data.result);
       }
@@ -30,7 +31,7 @@ const Result = () => {
               <div className="bg-transparent rounded-lg w-full md:w-2/3 p-4">
                 <div className="w-full h-8 bg-gray-400 rounded-full">
                   <div className="h-full text-center text-xl text-white bg-yellow-700 rounded-full" style={{ width: `${judePercent}%` }}>
-                    {judePercent !== 0 && `${judePercent}%`}
+                    {judePercent !== 0 && `${judePercent.toFixed(3)}%`}
                   </div>
                 </div>
               </div>
@@ -40,7 +41,7 @@ const Result = () => {
               <div className="bg-transparent rounded-lg w-full md:w-2/3 p-4">
                 <div className="w-full h-8 bg-gray-400 rounded-full">
                   <div className="h-full text-center text-xl text-white bg-yellow-700 rounded-full" style={{ width: `${viniPercent}%` }}>
-                    {viniPercent !== 0 && `${viniPercent}%`}
+                    {viniPercent !== 0 && `${viniPercent.toFixed(3)}%`}
                   </div>
                 </div>
               </div>
