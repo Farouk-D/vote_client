@@ -265,10 +265,6 @@ const AdminComponent = () => {
     const handleDecrypt = (data) => {
       const indice = data.ind
       const share = data.cle
-      console.log(data)
-      console.log(typeof(indice))
-      console.log(typeof(share))
-      console.log(uid.userMail)
       axios.post(`${process.env.REACT_APP_API_URL}admin/decrypt`,{adminMail:uid.userMail,share,indice}).then(res => {
         Swal.fire({
           icon: res.data.valid ? "success" : "error",
