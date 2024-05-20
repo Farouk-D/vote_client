@@ -27,7 +27,6 @@ const Connexion = () => {
     '/HediVSFarouk2.png',
     '/Stade.jpeg',
     '/ViniciusBellingham.png',
-    'TOTW.png',
     '/HediVSFarouk.png',
     '/Alg.jpg'
   ];
