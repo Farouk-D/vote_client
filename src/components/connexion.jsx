@@ -22,8 +22,8 @@ const Connexion = () => {
  axios.defaults.withCredentials = true;
 
   const backgrounds = [
-    '/BandJ.jpg',
-    '/ViniBelli.jpg:large',
+    '/BandG.jpg',
+    '/ViniBelli.jpg',
     '/HediVSFarouk2.png',
     '/Stade.jpeg',
     '/ViniciusBellingham.png',
