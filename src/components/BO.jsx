@@ -95,7 +95,11 @@ const BO = () => {
         });
       }
     } catch (err) {
-      alert("Une erreur s'est produite lors de la soumission du vote : " + err.message)
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: err.message,
+      });
     }
   };
 

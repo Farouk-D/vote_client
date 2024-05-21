@@ -4,6 +4,7 @@ import { SpanAlerte } from './SpanAlerte';
 import { sendAuthMail } from '../components/emailSender';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import Swal from 'sweetalert2'
 
 const Registration = () => {
     axios.defaults.withCredentials = true;
@@ -17,7 +18,13 @@ const Registration = () => {
 
     const onSubmit = async (data) => {
         if (data.password !== data.passwordC) {
-            return alert("Mauvaise entrée de mot de passe")
+          Swal.fire({
+            icon: "error",
+            title: "Mauvaise rentrée de mot de passe !",
+            background: "#00000a",
+            color: "#fff"
+          });
+          return 
         }
         try {
             const response = await axios.post(`${process.env.REACT_APP_API_URL}auth/getUser`, { userMail: data.email });
@@ -25,10 +32,15 @@ const Registration = () => {
                 const code = await Math.floor(Math.random() * 1000000);
                 const msg = "Voici votre code de vérification : " + code
                 await sendAuthMail(data.email, msg);
-                alert(response.data.message)
                 navigate("/verif", { state: { code, userMail: data.email, password: data.password, userRole: "user" } })
             } else if (response.status === 201) {
-                alert(response.data.message)
+              Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: response.data.message,
+                background: "#00000a",
+                color: "#fff"
+              });
             }
         } catch (err) {
             console.log(err)

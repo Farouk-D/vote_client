@@ -6,6 +6,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { SpanAlerte } from './SpanAlerte';
 import { sendAuthMail } from './emailSender';
 import axios from 'axios';
+import Swal from 'sweetalert2'
 
 
 
@@ -29,12 +30,33 @@ const Verification = () => {
           if (response.status === 201) {
             const msg = "Voici votre ID de vote : " + response.data.ID
             await sendAuthMail(userMail,msg)
-            alert("Inscription reussi !")
+            const Toast = Swal.mixin({
+              toast: true,
+              position: "top",
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.onmouseenter = Swal.stopTimer;
+                toast.onmouseleave = Swal.resumeTimer;
+              }
+            });
+            Toast.fire({
+              icon: "success",
+              title: "Inscription reussi, Connectez-vous !",
+              color : "#fff",
+              background:"#33322e",
+            });
             navigate("/")                    
           }
         }
         else {
-          alert("Mauvais code")
+          Swal.fire({
+            icon: "error",
+            title: "Mauvais code",
+            color : "#fff",
+            background:"#33322e",
+          });
         }
       } catch(err) {
           console.log(err)
