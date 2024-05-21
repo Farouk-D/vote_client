@@ -43,7 +43,7 @@ const Verification = () => {
 
   return (
     <div>
-      <div className="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-yellow-600">
+      <div className="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-yellow-800">
         <div>
         <Link to="/" className="flex items-center">
           <img src={`${process.env.PUBLIC_URL}/VoteLogo.jpg`} alt="Logo" className="h-20 sm:mr-5 rounded-full" />
